@@ -1,0 +1,58 @@
+﻿@{
+    Layout = "_LayoutDashboard";
+}
+
+<div id="formContainer" class="form-container text-center mt-4">
+    <form action="/Description/Add" method="post" class="row g-3">
+        <h2>
+            Service Descriptions <div id="selectedService"></div>
+        </h2>
+        <input hidden type="text" value="@Model" name="serviceId" />
+        <div class="col-md-12">
+            <div class="mb-3">
+                <label for="itemName" class="form-label">First Service Heading </label>
+                <input type="text" class="form-control" id="itemName" name="Name" required>
+            </div>
+            <div class="mb-3">
+                <label for="itemDescription" class="form-label">First Service Description</label>
+                <textarea class="form-control" id="itemDescription" name="DescriptionBody" rows="3"
+                          required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="itemName" class="form-label">Second Service Heading </label>
+                <input type="text" class="form-control" id="itemName" name="Name" required>
+            </div>
+            <div class="mb-3">
+                <label for="itemDescription" class="form-label">Second Service Description</label>
+                <textarea class="form-control" id="itemDescription" name="DescriptionBody" rows="3"
+                          required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="itemName" class="form-label">Third Service Heading </label>
+                <input type="text" class="form-control" id="itemName" name="Name" required>
+            </div>
+            <div class="mb-3">
+                <label for="itemDescription" class="form-label">Third Service Description</label>
+                <textarea class="form-control" id="itemDescription" name="DescriptionBody" rows="3"
+                          required></textarea>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-md-12 d-flex justify-content-between align-items-center mb-3">
+
+            
+
+
+
+        </div>
+
+
+    </form>
+</div>
+
+<p class="copyright">
+    &copy; 2023 - <span>DIXEL</span> All Rights Reserved.
+</p>

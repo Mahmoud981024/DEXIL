@@ -1,0 +1,37 @@
+﻿@{
+    Layout = "_LayoutDashboard";
+}
+@model Service
+
+<div class="container mt-5 ">
+    <div class="" id="updateServiceCover" style="color: #1d2459;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header rounded-2 mb-2 py-1">
+                    <h5 class="modal-title mx-2">Update Service</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="" asp-action="update" asp-controller="service" method="post" asp-route-Id="@Model.Id" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label class="form-label required mx-2" asp-for="Name">Service Name</label>
+                            <input type="text" class="form-control" required asp-for="Name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label required mx-2" asp-for="Image">Service Image</label>
+                            <input type="file" id="serviceImage" asp-for="Image" class="form-control"
+                                   accept="image/*" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label required mx-2" asp-for="description">Service Description</label>
+                            <textarea class="form-control" required asp-for="description"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary mx-1">Submit</button>
+                            <a type="button" class="btn btn-danger" href="/dashboard/index">Cancel</a>
+                        </div>
+                     </form>
+
+            </div>
+        </div>
+    </div>
+</div>

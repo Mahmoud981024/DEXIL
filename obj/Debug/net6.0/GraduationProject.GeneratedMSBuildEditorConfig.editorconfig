@@ -1,0 +1,145 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GraduationProject
+build_property.RootNamespace = GraduationProject
+build_property.ProjectDir = E:\final project\GraduationProject-finalApp\GraduationProject-22\GraduationProject-2\GraduationProject\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\final project\GraduationProject-finalApp\GraduationProject-22\GraduationProject-2\GraduationProject
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Description/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzY3JpcHRpb25cQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Description/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzY3JpcHRpb25cVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/login/ForgetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbG9naW5cRm9yZ2V0UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/login/ForgotPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbG9naW5cRm9yZ290UGFzc3dvcmRDb25maXJtYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/login/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbG9naW5cbG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/login/register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbG9naW5ccmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/login/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbG9naW5cUmVzZXRQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/login/ResetPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbG9naW5cUmVzZXRQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Request/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWVzdFxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Request/adminRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWVzdFxhZG1pblJlcXVlc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Request/GetAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWVzdFxHZXRBbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Role/AddRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxBZGRSb2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/ServiceDetail/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZURldGFpbFxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/ServiceDetail/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZURldGFpbFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/ServiceDetail/GetAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZURldGFpbFxHZXRBbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/ServiceDetail/GetID.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZURldGFpbFxHZXRJRC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/ServiceDetail/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZURldGFpbFxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Service/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Service/AddBanner.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxBZGRCYW5uZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Service/GetAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxHZXRBbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Service/GetID.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxHZXRJRC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Service/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Service/UpdateBanner.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxVcGRhdGVCYW5uZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Shared/_LayoutDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXREYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/final project/GraduationProject-finalApp/GraduationProject-22/GraduationProject-2/GraduationProject/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-mpnft66g6k

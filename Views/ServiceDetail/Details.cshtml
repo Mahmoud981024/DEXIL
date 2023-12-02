@@ -1,0 +1,84 @@
+﻿@model ServiceDetailsVM
+
+<section class="page-section" id="services">
+	<div class="container">
+		<div class="container section-title" style="margin-top: 20px;">
+			<h2 class="section-heading text-uppercase">@Model.ServiceName</h2>
+			@if (Model.BanarImage!=null)
+			{
+				<img src="@Model.BanarImage" class="img-fluid" alt="Cover Image">
+			}
+		</div>
+		<div class="row text-center">
+			@foreach (var item in Model.Description)
+			{
+
+				<div class="col-md-4">
+					<span class="fa-stack fa-2x">
+						<i class="fas fa-circle fa-stack-2x "></i>
+						<i class="fa-solid fa-info fa-stack-1x fa-inverse"></i>
+					</span>
+					<h4 class="my-3">@item.Name</h4>
+					<p class="text-muted">
+						@item.DescriptionBody
+					</p>
+				</div>
+			}
+		</div>
+	</div>
+</section>
+
+<!-- Recent-posts Section - Home Page -->
+<section id="recent-posts" class="recent-posts">
+
+	<!--  Section Title -->
+	@if (Model.Image.Count>0)
+	{
+		<div class="container section-title" data-aos="fade-up">
+			<h2>Recent Service</h2>
+			<p>
+				Stay ahead in design innovation. Explore our latest design solutions, integrating creativity with
+				cutting-edge technology to transform your brand
+			</p>
+		</div>
+
+		<!-- End Section Title -->
+	}
+	<!-- Recent Posts -->
+	<div class="container section-title">
+		<div class="container">
+			<div class="row gy-4">
+				@foreach (var item in Model.Image)
+				{
+					<div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+						<article>
+							<div class="post-img">
+								<img src="/@item" alt="" class="img-fluid">
+							</div>
+						</article>
+					</div>
+
+					<!-- End post list item -->
+				}
+			</div><!-- End recent posts list -->
+		</div>
+	</div>
+	<!-- Button for order From -->
+	<div class="container text-center">
+		@if (User.Identity.IsAuthenticated == true)
+		{
+			<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+				<a href="/Request/Add?serviceId=@Model.Description[0].ServiceId" class="text-white">ORDER NOW !</a>
+
+			</button>
+		}
+		else
+		{
+			<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+				<a href="/login/login" class="text-white">ORDER NOW !</a>
+
+			</button>
+		}
+	</div>
+
+</section><!-- End Recent-posts Section -->

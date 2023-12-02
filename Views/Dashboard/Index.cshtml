@@ -1,0 +1,96 @@
+﻿@{
+    Layout = "_LayoutDashboard";
+}
+@model List<Service>
+
+    <div class="container-fluid">
+        <div class="col-md-12 mt-4" style="color: #1d2459;">
+            <h1 id="services">Services</h1>
+        </div>
+        <div class="col-md-12 mt-3">
+            <div class="table-responsive">
+                <table class="table text-center custom-table" style="background-color: #e9e8e6;">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="section-heading">Services</th>
+                            <th class="section-heading">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var item in Model ){
+                            <tr>
+                            <td>
+                                <img src="@item.Image" width="30" height="30">
+                            </td>
+                            <td>
+                                @item.Name
+                            </td>
+                            <td>
+                                <div class="dropdown d-inline-block">
+                                    <button id="drop_button" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Update
+                                    </button>
+                                    <ul class="dropdown-menu" id="drop_ul">
+                                        <li><a class="dropdown-item text-light" id="drop_li" type="button" href="/service/update/@item.Id">Service Cover</a></li>
+                                        <li><a class="dropdown-item text-light" id="drop_li" type="button" href="/Description/update/@item.Id">Service Details</a></li>
+                                        <li><a class="dropdown-item text-light" id="drop_li" type="button" href="/Service/UpdateBanner?serviceId=@item.Id">Service Banner</a></li>
+                                        <li><a class="dropdown-item text-light" id="drop_li" type="button" href="/ServiceDetail/Update/@item.Id">Recent Service</a></li>
+                                    </ul>
+                                </div>
+                                <button type="button" class="btn btn-danger">
+                                    <a class="text-white" onclick="check(event)" href="/Service/delete/@item.Id">Delete</a>
+                                </button>
+                            </td>
+                        </tr>
+                        }
+                    
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function check(event) {
+        if (!confirm("are you sare")) {
+            event.preventDefault()
+        }
+
+    }
+</script>
+
+
+
+    <!-- Delete confirmation -->
+       <!-- <div class="container mt-5" style="color: #1d2459;">
+        <div class="modal" id="deleteConfirmation">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Delete Service</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center d-flex align-items-center"> -->
+                        <!-- Added d-flex and align-items-center classes here -->
+                        <!--<form>
+                            <div class="mb-3">
+                                <p>Are you sure you want to delete this service?</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Yes</button>
+                        <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- End Delete Confirmation -->
+
+
+    <p class="copyright">
+        &copy; 2023 - <span>DIXEL</span> All Rights Reserved.
+    </p>

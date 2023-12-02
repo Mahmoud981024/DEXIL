@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "_LayoutDashboard";
+}
+
+<!-- Update Service Recent Form -->
+<div class="container mt-5">
+    <div class="" id="updateServiceRecent" style="color: #1d2459;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header rounded-2 mb-2 py-1">
+                    <h5 class="modal-title mx-2">Update Service</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="/ServiceDetail/update" method="post" class="row g-3" enctype="multipart/form-data">
+                        <input hidden type="text" value="@Model" name="serviceId" />
+                        <div class="mb-3">
+                            <label for="serviceImage" class="mx-2">Recent services:</label>
+                            <div id="imageInputsContainer">
+                                <input type="file" id="serviceImage" name="image" class="form-control"
+                                       accept="image/*">
+                            </div>
+                            <br>
+                            <button type="button" class="btn btn-primary" onclick="addImageInput()">
+                                Add Other
+                                Image
+                            </button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary mx-1">Submit</button>
+                            <a type="button" class="btn btn-danger" style="margin-right:8px;" href="/dashboard/index">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div><!-- End Update Service Form -->

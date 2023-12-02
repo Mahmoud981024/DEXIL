@@ -1,0 +1,132 @@
+﻿@{
+    Layout = "_layout";
+}
+@model List<ClientRequestVM>
+<div class="container req">
+    <section class="h-100 h-custom">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12">
+                    <div class="card card-registration card-registration-2"
+                         style="border-radius: 15px; background-color: #e9e8e6;">
+                        <div class="card-body p-0">
+                            <div class="row g-0">
+                                <div class="col-lg-8">
+                                    <div class="p-5">
+                                        <div class="d-flex justify-content-between align-items-center mb-5">
+                                            <h1 class="fw-bold mb-0 text-black">Your request</h1>
+                                            <h6 class="mb-0 text-muted">@Model.Count Services</h6>
+                                        </div>
+                                        <hr class="my-4">
+                                        @foreach(var item in Model)
+                                        {
+                                                                    <div class="c">
+                                                                    <div class="row mb-4 d-flex justify-content-between align-items-center">
+                                                                    <div class="col-md-2 col-lg-2 col-xl-2">
+                                                                    <img src = "@item.ServiceImage"
+                                                                    class="img-fluid rounded-3">
+                                                                    </div>
+                                                                    <div class="col-md-3 col-lg-3 col-xl-3">
+                                                                    <h6 class="text-muted">@item.serviceName</h6>
+                                                                    <p class="card-text">
+                                                                    Status: <span class="status-text">@item.status</span>
+                                                                    </p>
+                                                                    </div>
+                                                                    <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                                                                    <h6 class="mb-0">$ @item.price</h6>
+                                                                    </div>
+                                                                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                                                    <a href="/Request/Delete/@item.id" class="text-muted"><i class="fas fa-times"></i></a>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                                    <hr class="my-4">
+                                        }
+                                        <div class="pt-5">
+                                            <h6 class="mb-0">
+                                                <a href="/service/getall" class="text-body">
+                                                    <i class="fas fa-long-arrow-alt-left me-2"></i>Back to home
+                                                </a>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 bg-grey">
+                                    <div class="p-5">
+                                        <h3 class="fw-bold mb-5 mt-2 pt-1">Summary</h3>
+                                        <hr class="my-4">
+
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <h5 class="text-uppercase">@Model.Count Services</h5>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-5">
+                                            <h5 class="text-uppercase">Total price</h5>
+                                            <h5>$ @ViewData["totalPrice"]</h5>
+                                        </div>
+                                        @*<button id="paypal-btn" type="button"
+                                                class="btn btn-primary btn-lg-rounded">
+                                            Checkout
+                                        </button>*@
+                                        <div id="paypal-btn" class="w-100"></div>
+                                        <hr class="my-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .req {
+        margin-top: 100px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+@section scripts{
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+    <script>
+        let _total = @Html.Raw(ViewData["totalPrice"]);
+        paypal.Button.render({
+            env: 'sandbox',
+            client: {
+                sandbox: 'AY_BGbH4CTpQhnTnmjh28LYfYj3peHbDwyEfGsO9oX46Q6969eXzYXGVp6HQFkcfwuM3qfLOt3MFK15U'
+            },
+            locale: 'en_US',
+            style: {
+
+            },
+            commit: true,
+
+            payment: function (data, actions) {
+                return actions.payment.create({
+                    transactions: [{
+                        amount: {
+                            total: _total,
+                            currency: 'USD'
+                        }
+                    }
+                    ]
+                });
+            },
+
+            onAuthorize: function (data, actions) {
+                console.log("payment executed");
+            }
+        }, '#paypal-btn');
+    </script>
+}

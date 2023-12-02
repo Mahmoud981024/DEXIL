@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin</title>
+
+<!-- Favicons -->
+<link href="/assets/img/logo dixel.png" rel="icon" />
+<link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet" />
+
+<!-- Vendor CSS Files -->
+<link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
+<link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/DashboardStyle.css">
+
+
+
+<!-- Template Main CSS File -->
+    <link rel="stylesheet" href="/assets/css/DashboardStyle.css">
+    <link href="/assets/css/style.css" rel="stylesheet" />
+    <link href="~/fontawesome-free-6.4.2-web/css/all.css" rel="stylesheet" />
+    <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+
+    <nav>
+        <div class="sidebar-top">
+            <span class="shrink-btn">
+                <i class='bx bx-chevron-left'></i>
+            </span>
+            <a href="#"><img src="/assets/img/logo dixel.png" class="logo" alt=""></a>
+        </div>
+
+        <div class="search">
+        </div>
+
+        <div class="sidebar-links">
+            <ul>
+                <div class="active-tab"></div>
+                <li class="tooltip-element" data-tooltip="0">
+                    <a href="/dashboard/index" class="active" data-active="0">
+                        <div class="icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <span class="link hide">Services</span>
+                    </a>
+                </li>
+                <li class="tooltip-element" data-tooltip="1">
+                    <a href="/Service/Add" data-active="1">
+                        <div class="icon">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                            <i class="fa-regular fa-pen-to-square"></i>
+                        </div>
+                        <span class="link hide">Add new services</span>
+                    </a>
+                </li>
+                <li class="tooltip-element" data-tooltip="2">
+                    <a href="/Request/adminRequest" data-active="2">
+                        <div class="icon">
+                            <i class="fa-solid fa-list-check"></i>
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <span class="link hide">Requests</span>
+                    </a>
+                </li>
+                <!-- <div class="tooltip">
+                    <span class="show">Services</span>
+                    <span>Add new services</span>
+                    <span>Requests</span>
+                </div> -->
+            </ul>
+        </div>
+
+        <div class="sidebar-footer">
+            <a href="#" class="account tooltip-element" data-tooltip="0">
+                <i class='bx bx-user'></i>
+            </a>
+            <div class="admin-user tooltip-element" data-tooltip="1">
+                <div class="admin-profile hide">
+                    <div class="admin-info">
+                        <h3>Dixel</h3>
+                        <h5>Admin</h5>
+                    </div>
+                </div>
+                <a href="/login/logout" class="log-out">
+                    <i class='bx bx-log-out'></i>
+                </a>
+            </div>
+            <!-- <div class="tooltip">
+                <span class="show">Dexil</span>
+                <span>Logout</span>
+            </div> -->
+        </div>
+    </nav>
+
+
+
+    <main>
+        @RenderBody()
+
+    </main>
+    
+
+
+    <!-- Vendor JS Files -->
+    <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/assets/js/Dashboard.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

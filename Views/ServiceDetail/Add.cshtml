@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "_LayoutDashboard";
+}
+
+<div id="formContainer" class="form-container text-center mt-4">
+    <form action="/ServiceDetail/Add" method="post" class="row g-3" enctype="multipart/form-data">
+        <h2>
+            Service Recent <div id="selectedService"></div>
+        </h2>
+        <input hidden type="text" value="@Model" name="serviceId" />
+
+        <div class="col-md-12 mt-3">
+            <label for="serviceImage">Recent services:</label>
+            <div id="imageInputsContainer">
+                <input type="file" id="serviceImage" name="image" class="form-control"
+                       accept="image/*">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="addImageInput()">Add Other Image</button>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="pt-5 w-100 d-flex justify-content-end">
+            <h6 class="mb-0"><a href="/service/AddBanner?ServiceId=@Model" class="text-body">Skip</a> <i class="fa-solid fa-arrow-right"></i></h6>
+        </div>
+
+    </form>
+</div>

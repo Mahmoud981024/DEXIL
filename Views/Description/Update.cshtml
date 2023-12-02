@@ -1,0 +1,69 @@
+﻿@{
+    Layout = "_LayoutDashboard";
+}
+@model List<Description>
+
+<!-- Update Service Descriptions Form -->
+<div class="container mt-5">
+    <div class="" id="updateServiceDescriptions" style="color: #1d2459; margin-bottom:20px">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header rounded-2 mb-2 py-1">
+                    <h5 class="modal-title mx-2">Update Service</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="" asp-action="update" asp-controller="description" method="post" asp-route-Id="@Model[0].Id">
+                        <div class="mb-3">
+                            <label class="form-label required mx-2" for="serviceName">About:</label>
+                            <input hidden type="text" value="@Model[0].ServiceId" name="serviceId" />
+                            <div class="mb-3">
+                                <label class="form-label required mx-2" for="itemName" class="form-label mx-2">
+                                    Service
+                                    Heading
+                                </label>
+                                <input asp-for="@Model[0].Name" name ="Name" type="text" class="form-control" id="itemName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label required mx-2" for="itemDescription"
+                                       class="form-label">Service Description</label>
+                                <textarea asp-for="@Model[0].DescriptionBody" name="DescriptionBody" class="form-control" id="itemDescription"
+                                          rows="3" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label required mx-2" for="itemName" class="form-label">
+                                    Service
+                                    Heading
+                                </label>
+                                <input asp-for="@Model[1].Name" name="Name" type="text" class="form-control" id="itemName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label required mx-2" for="itemDescription"
+                                       class="form-label">Service Description</label>
+                                <textarea asp-for="@Model[1].DescriptionBody" name="DescriptionBody" class="form-control" id="itemDescription"
+                                          rows="3" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label required mx-2" for="itemName" class="form-label">
+                                    Service
+                                    Heading
+                                </label>
+                                <input asp-for="@Model[2].Name" name="Name" type="text" class="form-control" id="itemName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label required mx-2" for="itemDescription"
+                                       class="form-label">Service Description</label>
+                                <textarea asp-for="@Model[2].DescriptionBody" name="DescriptionBody" class="form-control" id="itemDescription"
+                                          rows="3" required></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary mx-1">Submit</button>
+                            <a type="button" class="btn btn-danger" href="/dashboard/index">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div><!-- End Update Service Form -->

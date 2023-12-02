@@ -1,0 +1,225 @@
+﻿@model List<Service>
+<!--Hero Section -->
+<section class="video-container">
+    <div class="video-overlay"></div>
+    <video id="hero" autoplay loop muted plays-inline class="video-opacity">
+        <source src="/assets/img/Hero-section.mp4" type=" video/mp4">
+    </video>
+    <div class="text-container">
+        <h1>DIXEL</h1>
+        <h2>Where Design Meets Innovation. Welcome to DIXEL, crafting Your Vision into Reality</h2>
+        <a href="#about" class="btn-about">About Me</a>
+    </div>
+</section><!-- End Hero -->
+<!-- ======= Services Section ======= -->
+<section id="services" class="services">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Services</h2>
+            <p>
+                Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+                in iste officiis commodi quidem hic quas.
+            </p>
+        </div>
+        
+        <!-- Services Items -->
+        <!-- Service Item 1 -->
+
+        <div class="row">
+            @foreach(var item in Model){
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch " data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box iconbox-blue mb-3">
+                    <div class="icon">
+                        <img src="@item.Image" width="80" height="80">
+                    </div>
+                    <h4><a href="PaidAdsManagement.html">@item.Name</a></h4>
+                    <p>@item.description</p>
+                        <div>
+                            <a href="/ServiceDetail/Details/@item.Id">
+                                <button type="button" class="btn btn-primary show-more"
+                                        style="background-color: #1877f2;border-color: #1877f2;">
+                                    Show
+                                    More
+                                </button>
+                            </a>
+                            @if (User.Identity.IsAuthenticated == true)
+                            {
+                                <button type="button" class="btn btn-primary order-now">
+                                    <a class="text-white" href="/request/Add?serviceId=@item.Id">ORDER</a>
+                                </button>
+                            }
+                            else
+                            {
+                                <button type="button" class="btn btn-primary order-now">
+                                    <a class="text-white" href="/login/login">ORDER</a>
+                                </button>
+                            }
+                        </div>
+                </div>
+                
+            </div>
+            }
+            
+        </div>
+    </div>
+</section><!-- End Services Section -->
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>About</h2>
+            <p>
+                An ancient being...
+                Here at Dixel Powerful Research Scientists we will not express your presence using our various methods that
+                we offer you to make a small difference in your business project or service that makes the resonance and
+                creativity of the audience it targets
+            </p>
+        </div>
+    </div>
+</section><!-- End About Section -->
+
+<!-- ======= Facts Section ======= -->
+<section id="facts" class="facts">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Facts</h2>
+        </div>
+        <div class="row counters">
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                      class="purecounter"></span>
+                <p>Clients</p>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                      class="purecounter"></span>
+                <p>Projects</p>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
+                      class="purecounter"></span>
+                <p>Hours Of Support</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+                      class="purecounter"></span>
+                <p>Hard Workers</p>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End Facts Section -->
+<!-- ======= Clients Section ======= -->
+<section id="testimonials" class="testimonials">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Clients</h2>
+        </div>
+
+        <div class="testimonials-slider swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="/assets/img/Clients/Qatar-The Ministry of Education.png" class="testimonial-img" alt="">
+                        <h3>The Ministry of Education</h3>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Through our design and marketing expertise, we've amplified this brand's presence, crafting a
+                            distinct identity and engaging strategies to captivate its audience
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="/assets/img/Clients/Saudi-Ministry of Municipal Affairs.jpg" class="testimonial-img" alt="">
+                        <h3>Ministry of Municipal Affairs</h3>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Through our design and marketing expertise, we've amplified this brand's presence, crafting a
+                            distinct identity and engaging strategies to captivate its audience
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="/assets/img/Clients/Saudi_Ministry_of_Health_Logo.svg.png" class="testimonial-img" alt="">
+                        <h3>Ministry of Health</h3>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Through our design and marketing expertise, we've amplified this brand's presence, crafting a
+                            distinct identity and engaging strategies to captivate its audience
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="/assets/img/Clients/dixipay.png" class="testimonial-img" alt="">
+                        <h3>Dixipay</h3>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Through our design and marketing expertise, we've amplified this brand's presence, crafting a
+                            distinct identity and engaging strategies to captivate its audience
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="/assets/img/Clients/مستقل.png" class=" testimonial-img" alt="">
+                        <h3>Mostaqel</h3>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Through our design and marketing expertise, we've amplified this brand's presence, crafting a
+                            distinct identity and engaging strategies to captivate its audience
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div><!-- End testimonial item -->
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="/assets/img/Clients/Hsoub-logo.png" class="testimonial-img" alt="">
+                        <h3>Hsoub</h3>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Through our design and marketing expertise, we've amplified this brand's presence, crafting a
+                            distinct identity and engaging strategies to captivate its audience
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+
+                </div><!-- End testimonial item -->
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="/assets/img/Clients/Dafater.png" class="testimonial-img" alt="">
+                        <h3>Dafater</h3>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Through our design and marketing expertise, we've amplified this brand's presence, crafting a
+                            distinct identity and engaging strategies to captivate its audience
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div><!-- End testimonial item -->
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</section><!-- End Testimonials Section -->

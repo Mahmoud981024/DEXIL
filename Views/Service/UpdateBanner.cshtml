@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "_LayoutDashboard";
+}
+<!-- Update Service Banner Form -->
+<div class="container mt-5">
+    <div class="" id="updateServiceBanner" style="color: #1d2459;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header rounded-2 mb-2 py-1">
+                    <h5 class="modal-title mx-2">Update Service</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="/Service/AddBanner" method="post" class="row g-3" enctype="multipart/form-data">
+                        <input hidden type="text" value="@Model" name="serviceId" />
+                        <div class="mb-3">
+                            <label for="serviceImage" class="mx-2 mb-1">Banner:</label>
+                            <input type="file" id="serviceImage" name="bannerImage" class="form-control"
+                                   accept="image/*">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary mx-1">Submit</button>
+                            <a type="button" class="btn btn-danger" style="margin-right:8px;" href="/dashboard/index">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div><!-- End Update Service Form -->

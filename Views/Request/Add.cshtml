@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "_layout";
+}
+<!-- Order Form -->
+<div class="container mt-5">
+    <div class="" id="myModal" style="margin-top:100px; min-height:415px;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header rounded-2 mb-2 py-1">
+                    <h5 class="modal-title mx-2">ORDER NOW !</h5>
+                </div>
+                <div class="modal-body">
+                    <form asp-action="Add" method="post" asp-controller="Request">
+                        <input hidden type="text" value="@Model" name="serviceId" />
+                        <div class="mb-3">
+                            <label class="form-label required mx-2">Your Service Description:</label>
+                            <textarea class="form-control" required name="description"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary mx-1">Submit</button>
+                            <button type="button" class="btn btn-danger"><a href="/serviceDetail/Details/@Model" class=" text-white">Cancel</a></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- End Order Form -->

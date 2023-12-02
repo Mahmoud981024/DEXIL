@@ -1,0 +1,80 @@
+﻿@model GraduationProject.ViewModel.RegisterVM
+<section class="" style="">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100" style="margin-top:95px;">
+            <div class="col-lg-12 col-xl-11">
+                <div class="card text-black shadow" style="border-radius: 25px;">
+                    <div class="card-body p-md-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 col-lg-7 col-xl-6 order-2 order-lg-1">
+
+                                <div class="h1 fw-bold mb-5 mx-1 mx-md-4 mt-4 text-center text-lg-start"><img style="width:40%;" src="~/assets/img/logo dixel.png" /></div>
+
+                                <form class="mx-1 mx-md-4"  method="post">
+                                    <div asp-validation-summary="All" class="text-danger"></div>
+
+                                    <div class="d-flex flex-row align-items-center mb-2">
+                                        <div class="form-floating mb-3 w-100">
+                                            <input type="text" class="form-control" asp-for="userName" id="floatingNameInput" placeholder="name" name="userName">
+                                            <label for="floatingNameInput">Username</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-2">
+                                        <div class="form-floating mb-3 w-100">
+                                            <input type="email" class="form-control" asp-for="Email" id="floatingEmailInput" placeholder="name@example.com" name="Email">
+                                            <label for="floatingEmailInput">Your Email</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-2">
+                                        <div class="form-floating mb-3 w-100">
+                                            <input type="password" class="form-control" asp-for="Password" id="floatingPassword" placeholder="Password">
+                                            <label for="floatingPassword">Password</label>
+                                            <span asp-validation-for="Password" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-2">
+                                        <div class="form-floating mb-3 w-100">
+                                            <input type="password" class="form-control" asp-for="ConfirmPassword" id="floatingRepeatPassword" placeholder="Repeat Password">
+                                            <label for="floatingRepeatPassword">Repeat Password</label>
+                                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check d-flex justify-content-start mb-5">
+                                        <input class="form-check-input me-2" asp-for="Terms" id="form2Example3c" />
+                                        <label class="form-check-label" for="form2Example3">
+                                            I agree all statements in <a href="#!">Terms of service</a>
+
+                                        </label>
+                                        <span asp-validation-for="Terms" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center mb-3 mb-lg-4 w-100">
+                                        <button style="background-color:#1d2456; color:#25ade1" type="submit" class="btn w-100">Sign up</button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                            <div class="col-md-10 col-lg-5 col-xl-6 d-flex align-items-center order-1 order-lg-2">
+
+                                <img style="border-radius:25px;" src="~/assets/img/signup.png"
+                                     class="img-fluid" alt="Sample image"/>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

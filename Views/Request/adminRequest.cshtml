@@ -1,0 +1,80 @@
+﻿ <!-- Card Request -->
+@{
+    Layout = "_LayoutDashboard";
+}
+@model List<AdminRequestVM>
+<div class="container req">
+    <section class="h-100 h-custom">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12">
+                    <div class="card card-registration card-registration-2"
+                         style="border-radius: 15px; background-color: #e9e8e6;">
+                        <div class="card-body p-0">
+                            <div class="col-lg-12">
+                                <div class="p-5">
+                                    <div class="d-flex justify-content-between align-items-center mb-5">
+                                        <h3 class=" mb-0 " style="color:#1d2459;">Clients Requests</h3>
+                                        <h6 class="mb-0 text-muted">@Model.Count New requests</h6>
+                                    </div>
+                                    <hr class="my-4">
+                                    @foreach(var item in Model)
+                                    {
+                                    <div class="c">
+                                        <div class="row mb-4 d-flex justify-content-between align-items-center">
+                                            <div class="col-md-2 col-lg-2 col-xl-2">
+                                                <img src="@item.ServiceImage" class="img-fluid rounded-3"
+                                                     style="max-width: 70px;">
+                                            </div>
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <h6>Client Name: @item.UName</h6>
+                                                <h6>Email: @item.UEmail</h6>
+                                                <h6 class="text-muted">Service Name: @item.serviceName</h6>
+                                                <p>Description:<br>@item.Description</p>
+                                            </div>
+                                            <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                                    <label for="form_@item.id" class="d-flex col-lg-4">Price:</label>
+                                                    <input id="form1_@item.id" onchange="mm('@item.id')" min="0" name="quantity" value="1" type="number"
+                                                           class="form-control form-control-sm" />
+                                                    <input hidden type="text" value="@item.id" id="rqid_@item.id" name="serviceId" />
+                                            </div>
+                                            <div class="col-md-2 col-lg-2 col-xl-2">
+                                                <div class="d-flex">
+                                                        <button class="btn btn-success btn-sm me-2">
+                                                            <a class="text-white" id="anchor_@item.id" href="">Accept</a>
+                                                        </button>
+                                                        <button class="btn btn-danger btn-sm">
+
+                                                            <a class=" text-white" href="/Request/Adminreject/@item.id">Reject</a>
+                                                        </button>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="my-4">
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div><!-- End Card Request -->
+
+<p class="copyright">
+    &copy; 2023 - <span>DIXEL</span> All Rights Reserved.
+</p>
+
+<script>
+    function mm(itemid) {
+        const input = document.getElementById("form1_" + itemid);
+        var rid = document.getElementById("rqid_" + itemid).value;
+        const anchor = document.getElementById("anchor_" + itemid);
+        anchor.href = "/Request/adminupdate/" + rid + "?price=" + input.value;
+        console.log(rid)
+        console.log(input.value)
+    }
+
+</script>
